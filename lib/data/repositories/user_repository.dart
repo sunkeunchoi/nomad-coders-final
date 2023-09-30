@@ -1,7 +1,11 @@
 import 'package:proxima_nomadcoders/domain/entities/user.dart';
 import 'package:proxima_nomadcoders/domain/repositories/user_repository.dart';
 
-class UserRepsoitory implements IUserRepository {
+import '../sources/user_data_source.dart';
+
+class UserRepository implements IUserRepository {
+  UserRepository(this._userDataSource);
+  final UserDataSource _userDataSource;
   @override
   Future<User?> getCurrentUser() {
     // TODO: implement getCurrentUser
