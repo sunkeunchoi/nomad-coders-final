@@ -1,4 +1,8 @@
 import 'package:go_router/go_router.dart';
+import 'package:proxima_nomadcoders/presentation/moods_page.dart';
+import 'package:proxima_nomadcoders/presentation/sign_in_page.dart';
+
+import '../presentation/sign_up_page.dart';
 
 // final router = Provider((ref) {
 //   // final user = ref.watch(authState);
@@ -25,4 +29,20 @@ import 'package:go_router/go_router.dart';
 //   );
 // });
 
-final router = GoRouter(routes: []);
+final router = GoRouter(
+  initialLocation: MoodsPage.routePath,
+  routes: [
+    GoRoute(
+      path: MoodsPage.routePath,
+      builder: (context, state) => const MoodsPage(),
+    ),
+    GoRoute(
+      path: SignInPage.routePath,
+      builder: (context, state) => const SignInPage(),
+    ),
+    GoRoute(
+      path: SignUpPage.routePath,
+      builder: (context, state) => const SignUpPage(),
+    ),
+  ],
+);

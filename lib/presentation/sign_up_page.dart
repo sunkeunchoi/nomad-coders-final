@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 
-class SignInPage extends StatelessWidget {
-  const SignInPage({super.key});
-  static const routeName = "sign-in";
-  static const routeURL = "/sign-in";
+class SignUpPage extends StatelessWidget {
+  const SignUpPage({super.key});
+  static const routePath = "/sign-up";
 
   @override
   Widget build(BuildContext context) {
