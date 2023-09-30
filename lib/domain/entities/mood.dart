@@ -1,14 +1,27 @@
-import 'package:freezed_annotation/freezed_annotation.dart';
-part "mood.freezed.dart";
-part "mood.g.dart";
+import 'package:equatable/equatable.dart';
+import 'package:flutter/material.dart';
+import 'package:uuid/uuid.dart';
 
-@freezed
-class Mood with _$Mood {
-  const factory Mood({
-    required String id,
-    required String name,
-    required String content,
-  }) = _Mood;
+@immutable
+class Mood extends Equatable {
+  final String id;
+  final String name;
+  final String content;
 
-  factory Mood.fromJson(Map<String, dynamic> json) => _$MoodFromJson(json);
+  Mood({
+    required this.name,
+    required this.content,
+    String? id,
+  }) : id = id ?? const Uuid().v8();
+
+  @override
+  List<Object?> get props => [id];
+
+  Mood copyWith({String? name, String? content}) {
+    return Mood(
+      name: name ?? this.name,
+      content: content ?? this.content,
+      id: id,
+    );
+  }
 }
