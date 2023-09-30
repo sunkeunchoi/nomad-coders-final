@@ -29,8 +29,8 @@ class UserDataSourceImpl implements UserDataSource {
   }
 
   @override
-  Future<void> signIn({required String email, required String password}) {
-    return _firebaseAuth.signInWithEmailAndPassword(email: email, password: password);
+  Future<void> signIn({required String email, required String password}) async {
+    await _firebaseAuth.signInWithEmailAndPassword(email: email, password: password);
   }
 
   @override
