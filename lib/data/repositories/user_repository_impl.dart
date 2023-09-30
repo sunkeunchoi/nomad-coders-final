@@ -1,19 +1,20 @@
-import 'package:proxima_nomadcoders/domain/entities/user.dart';
+import 'package:proxima_nomadcoders/domain/entities/profile.dart';
 import 'package:proxima_nomadcoders/domain/repositories/user_repository.dart';
 
 import '../sources/user_data_source.dart';
 
-class UserRepository implements IUserRepository {
-  UserRepository(this._userDataSource);
+class UserRepositoryImpl implements UserRepository {
+  UserRepositoryImpl(this._userDataSource);
   final UserDataSource _userDataSource;
+
   @override
-  Future<User?> getCurrentUser() {
+  Future<Profile?> getCurrentUser() {
     // TODO: implement getCurrentUser
     throw UnimplementedError();
   }
 
   @override
-  Future<User?> signIn({required String email, required String password}) {
+  Future<Profile?> signIn({required String email, required String password}) {
     // TODO: implement signIn
     throw UnimplementedError();
   }
@@ -25,7 +26,7 @@ class UserRepository implements IUserRepository {
   }
 
   @override
-  Future<User?> signUp({required String email, required String password}) {
+  Future<Profile?> signUp({required String email, required String password}) {
     // TODO: implement signUp
     throw UnimplementedError();
   }

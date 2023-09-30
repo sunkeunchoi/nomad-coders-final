@@ -3,8 +3,8 @@ import 'package:proxima_nomadcoders/domain/repositories/mood_repository.dart';
 
 import '../sources/mood_data_source.dart';
 
-class MoodRepository implements IMoodRepository {
-  MoodRepository(this._moodDataSource);
+class MoodRepositoryImpl implements MoodRepository {
+  MoodRepositoryImpl(this._moodDataSource);
   final MoodDataSource _moodDataSource;
   @override
   Future<void> addMood({required Mood mood}) {

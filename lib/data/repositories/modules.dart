@@ -5,12 +5,12 @@ import '../sources/module.dart';
 import 'mood_repository.dart';
 import 'user_repository.dart';
 
-final moodProvider = Provider<IMoodRepository>((ref) {
+final moodProvider = Provider<MoodRepository>((ref) {
   var moodSource = ref.read(moodSourceProvider);
-  return MoodRepository(moodSource);
+  return MoodRepositoryImpl(moodSource);
 });
 
-final userProvider = Provider<IUserRepository>((ref) {
+final userProvider = Provider<UserRepository>((ref) {
   var userSource = ref.read(userSourceProvider);
-  return UserRepository(userSource);
+  return UserRepositoryImpl(userSource);
 });

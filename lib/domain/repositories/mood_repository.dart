@@ -1,6 +1,6 @@
 import '../entities/mood.dart';
 
-abstract interface class IMoodRepository {
+abstract interface class MoodRepository {
   Future<void> addMood({
     required Mood mood,
   });
