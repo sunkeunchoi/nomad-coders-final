@@ -6,6 +6,7 @@ import '../sources/user_data_source.dart';
 class UserRepositoryImpl implements UserRepository {
   UserRepositoryImpl(this._userDataSource);
   final UserDataSource _userDataSource;
+  @override
   Stream<String?> get authStateChanges => _userDataSource.authStateChanges;
 
   @override
