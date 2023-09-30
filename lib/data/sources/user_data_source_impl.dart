@@ -12,6 +12,7 @@ class UserDataSourceImpl implements UserDataSource {
   final FirebaseAuth _firebaseAuth = FirebaseAuth.instance;
   final FirebaseStorage _firebaseStorage = FirebaseStorage.instance;
   final FirebaseFirestore _firebaseFirestore = FirebaseFirestore.instance;
+
   @override
   Future<void> signUp({required String email, required String password}) async {
     var userCredential = await _firebaseAuth.createUserWithEmailAndPassword(email: email, password: password);
@@ -66,4 +67,7 @@ class UserDataSourceImpl implements UserDataSource {
       return Profile.fromJson(value.data()!);
     });
   }
+
+  @override
+  Stream<String?> get authStateChanges => _firebaseAuth.authStateChanges().map((user) => user?.uid);
 }
