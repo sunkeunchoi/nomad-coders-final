@@ -1,1 +1,12 @@
-{}
+{
+    "@@locale": "en",
+    "app_name": "How is your moods?",
+    "login_screen_Title": "Log in",
+    "login_screen_EmailHint": "Email",
+    "login_screen_PasswordHint": "Password",
+    "login_screen_LoginButton": "Log in",
+    "login_screen_ForgotPasswordButton": "Forgot password?",
+    "signup_screen_CreateNewAccountButton": "Create new account",
+    "signup_screen_AlreadyHaveAccountButton": "Already have an account?",
+    "language": "English (US)"
+}

@@ -1,5 +1,5 @@
 // DO NOT EDIT. This is code generated via package:intl/generate_localized.dart
-// This is a library that provides messages for a en locale. All the
+// This is a library that provides messages for a ko locale. All the
 // messages from the main program should be duplicated here with the same
 // function name.
 
@@ -18,23 +18,22 @@ final messages = new MessageLookup();
 typedef String MessageIfAbsent(String messageStr, List<dynamic> args);
 
 class MessageLookup extends MessageLookupByLibrary {
-  String get localeName => 'en';
+  String get localeName => 'ko';
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
-        "app_name": MessageLookupByLibrary.simpleMessage("How is your moods?"),
-        "language": MessageLookupByLibrary.simpleMessage("English (US)"),
-        "login_screen_EmailHint": MessageLookupByLibrary.simpleMessage("Email"),
+        "app_name": MessageLookupByLibrary.simpleMessage("당신의 기분은?"),
+        "language": MessageLookupByLibrary.simpleMessage("한글"),
+        "login_screen_EmailHint": MessageLookupByLibrary.simpleMessage("이메일"),
         "login_screen_ForgotPasswordButton":
-            MessageLookupByLibrary.simpleMessage("Forgot password?"),
-        "login_screen_LoginButton":
-            MessageLookupByLibrary.simpleMessage("Log in"),
+            MessageLookupByLibrary.simpleMessage("비밀번호를 잊으셨나요?"),
+        "login_screen_LoginButton": MessageLookupByLibrary.simpleMessage("로그인"),
         "login_screen_PasswordHint":
-            MessageLookupByLibrary.simpleMessage("Password"),
-        "login_screen_Title": MessageLookupByLibrary.simpleMessage("Log in"),
+            MessageLookupByLibrary.simpleMessage("패스워드"),
+        "login_screen_Title": MessageLookupByLibrary.simpleMessage("로그인"),
         "signup_screen_AlreadyHaveAccountButton":
-            MessageLookupByLibrary.simpleMessage("Already have an account?"),
+            MessageLookupByLibrary.simpleMessage("이미 계정이 있으신가요?"),
         "signup_screen_CreateNewAccountButton":
-            MessageLookupByLibrary.simpleMessage("Create new account")
+            MessageLookupByLibrary.simpleMessage("계정을 만드세요")
       };
 }

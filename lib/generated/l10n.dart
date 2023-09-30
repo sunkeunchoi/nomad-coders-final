@@ -49,6 +49,96 @@ class S {
   static S? maybeOf(BuildContext context) {
     return Localizations.of<S>(context, S);
   }
+
+  /// `How is your moods?`
+  String get app_name {
+    return Intl.message(
+      'How is your moods?',
+      name: 'app_name',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Log in`
+  String get login_screen_Title {
+    return Intl.message(
+      'Log in',
+      name: 'login_screen_Title',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Email`
+  String get login_screen_EmailHint {
+    return Intl.message(
+      'Email',
+      name: 'login_screen_EmailHint',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Password`
+  String get login_screen_PasswordHint {
+    return Intl.message(
+      'Password',
+      name: 'login_screen_PasswordHint',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Log in`
+  String get login_screen_LoginButton {
+    return Intl.message(
+      'Log in',
+      name: 'login_screen_LoginButton',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Forgot password?`
+  String get login_screen_ForgotPasswordButton {
+    return Intl.message(
+      'Forgot password?',
+      name: 'login_screen_ForgotPasswordButton',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Create new account`
+  String get signup_screen_CreateNewAccountButton {
+    return Intl.message(
+      'Create new account',
+      name: 'signup_screen_CreateNewAccountButton',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Already have an account?`
+  String get signup_screen_AlreadyHaveAccountButton {
+    return Intl.message(
+      'Already have an account?',
+      name: 'signup_screen_AlreadyHaveAccountButton',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `English (US)`
+  String get language {
+    return Intl.message(
+      'English (US)',
+      name: 'language',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {
@@ -57,6 +147,7 @@ class AppLocalizationDelegate extends LocalizationsDelegate<S> {
   List<Locale> get supportedLocales {
     return const <Locale>[
       Locale.fromSubtags(languageCode: 'en'),
+      Locale.fromSubtags(languageCode: 'ko'),
     ];
   }
 

@@ -30,7 +30,8 @@ import '../presentation/sign_up_page.dart';
 // });
 
 final router = GoRouter(
-  initialLocation: MoodsPage.routePath,
+  // initialLocation: MoodsPage.routePath,
+  initialLocation: SignInPage.routePath,
   routes: [
     GoRoute(
       path: MoodsPage.routePath,
