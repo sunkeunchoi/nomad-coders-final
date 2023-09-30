@@ -1,3 +1,5 @@
+import 'package:animated_emoji/emoji.dart';
+import 'package:animated_emoji/emojis.dart';
 import 'package:flutter/material.dart';
 
 class MoodsPage extends StatelessWidget {
@@ -11,7 +13,10 @@ class MoodsPage extends StatelessWidget {
         title: const Text("Moods"),
       ),
       body: const Center(
-        child: Text("Moods"),
+        child: AnimatedEmoji(
+          AnimatedEmojis.rocket,
+          size: 200,
+        ),
       ),
     );
   }
