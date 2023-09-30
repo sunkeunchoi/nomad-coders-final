@@ -6,6 +6,7 @@ import 'package:go_router/go_router.dart';
 
 import '../generated/l10n.dart';
 import 'sign_up_page.dart';
+import 'view_models/module.dart';
 
 class SignInPage extends ConsumerStatefulWidget {
   const SignInPage({super.key});
@@ -16,12 +17,11 @@ class SignInPage extends ConsumerStatefulWidget {
 }
 
 class _SignInPageState extends ConsumerState<SignInPage> {
-  final _formKey = GlobalKey<FormState>();
   final _emailController = TextEditingController();
   final _passwordController = TextEditingController();
   final _focusNode = FocusNode();
   final bool _isPasswordVisible = false;
-
+  late final model = ref.read(profileModel);
   @override
   void initState() {
     super.initState();
@@ -38,7 +38,6 @@ class _SignInPageState extends ConsumerState<SignInPage> {
     _emailController.dispose();
     _passwordController.dispose();
     _focusNode.dispose();
-    _formKey.currentState?.dispose();
     super.dispose();
   }
 
@@ -63,6 +62,9 @@ class _SignInPageState extends ConsumerState<SignInPage> {
               color: Colors.transparent,
             ),
             TextField(
+              controller: _emailController,
+              keyboardType: TextInputType.emailAddress,
+              autocorrect: false,
               decoration: InputDecoration(
                 border: const OutlineInputBorder(),
                 labelText: S.of(context).login_screen_EmailHint,
@@ -72,7 +74,9 @@ class _SignInPageState extends ConsumerState<SignInPage> {
               color: Colors.transparent,
             ),
             TextField(
+              controller: _passwordController,
               obscureText: !_isPasswordVisible,
+              keyboardType: TextInputType.text,
               autocorrect: false,
               decoration: InputDecoration(
                 border: const OutlineInputBorder(),
@@ -81,7 +85,14 @@ class _SignInPageState extends ConsumerState<SignInPage> {
             ),
             const Divider(color: Colors.transparent),
             GestureDetector(
-              onTap: () {},
+              onTap: () async {
+                if (_emailController.text.isNotEmpty && _passwordController.text.isNotEmpty) {
+                  await model.signIn(
+                    email: _emailController.text,
+                    password: _passwordController.text,
+                  );
+                }
+              },
               child: Container(
                 width: double.infinity,
                 padding: const EdgeInsets.symmetric(
