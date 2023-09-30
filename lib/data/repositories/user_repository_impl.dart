@@ -1,5 +1,5 @@
-import 'package:proxima_nomadcoders/domain/entities/profile.dart';
-import 'package:proxima_nomadcoders/domain/repositories/user_repository.dart';
+import 'package:proxima_nomadcoders/domain/profiles/entities/profile.dart';
+import 'package:proxima_nomadcoders/domain/profiles/repositories/user_repository.dart';
 
 import '../sources/user_data_source.dart';
 

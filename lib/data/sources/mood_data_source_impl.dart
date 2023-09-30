@@ -1,5 +1,5 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:proxima_nomadcoders/domain/entities/mood.dart';
+import 'package:proxima_nomadcoders/domain/moods/entities/mood.dart';
 
 import 'mood_data_source.dart';
 

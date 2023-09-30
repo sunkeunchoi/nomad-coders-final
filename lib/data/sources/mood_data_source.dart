@@ -1,4 +1,4 @@
-import '../../domain/entities/mood.dart';
+import '../../domain/moods/entities/mood.dart';
 
 abstract interface class MoodDataSource {
   Future<void> add({

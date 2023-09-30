@@ -1,6 +1,6 @@
 import 'dart:io';
 
-import '../../domain/entities/profile.dart';
+import '../../domain/profiles/entities/profile.dart';
 
 abstract interface class UserDataSource {
   Stream<String?> get authStateChanges;
