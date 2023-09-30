@@ -60,11 +60,21 @@ class S {
     );
   }
 
-  /// `Log in`
+  /// `Welcome to Mood Tracker`
   String get login_screen_Title {
     return Intl.message(
-      'Log in',
+      'Welcome to Mood Tracker',
       name: 'login_screen_Title',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Join!`
+  String get signup_screen_Title {
+    return Intl.message(
+      'Join!',
+      name: 'signup_screen_Title',
       desc: '',
       args: [],
     );
@@ -90,11 +100,21 @@ class S {
     );
   }
 
-  /// `Log in`
+  /// `Enter`
   String get login_screen_LoginButton {
     return Intl.message(
-      'Log in',
+      'Enter',
       name: 'login_screen_LoginButton',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Create an account →`
+  String get login_screen_CreateAccountButton {
+    return Intl.message(
+      'Create an account →',
+      name: 'login_screen_CreateAccountButton',
       desc: '',
       args: [],
     );
@@ -110,10 +130,10 @@ class S {
     );
   }
 
-  /// `Create new account`
+  /// `Create account`
   String get signup_screen_CreateNewAccountButton {
     return Intl.message(
-      'Create new account',
+      'Create account',
       name: 'signup_screen_CreateNewAccountButton',
       desc: '',
       args: [],

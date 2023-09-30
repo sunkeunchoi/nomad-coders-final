@@ -1,12 +1,14 @@
 {
     "@@locale": "en",
     "app_name": "How is your moods?",
-    "login_screen_Title": "Log in",
+    "login_screen_Title": "Welcome to Mood Tracker",
+    "signup_screen_Title": "Join!",
     "login_screen_EmailHint": "Email",
     "login_screen_PasswordHint": "Password",
-    "login_screen_LoginButton": "Log in",
+    "login_screen_LoginButton": "Enter",
+    "login_screen_CreateAccountButton": "Create an account →",
     "login_screen_ForgotPasswordButton": "Forgot password?",
-    "signup_screen_CreateNewAccountButton": "Create new account",
+    "signup_screen_CreateNewAccountButton": "Create account",
     "signup_screen_AlreadyHaveAccountButton": "Already have an account?",
     "language": "English (US)"
 }

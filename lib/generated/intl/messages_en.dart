@@ -24,17 +24,21 @@ class MessageLookup extends MessageLookupByLibrary {
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "app_name": MessageLookupByLibrary.simpleMessage("How is your moods?"),
         "language": MessageLookupByLibrary.simpleMessage("English (US)"),
+        "login_screen_CreateAccountButton":
+            MessageLookupByLibrary.simpleMessage("Create an account →"),
         "login_screen_EmailHint": MessageLookupByLibrary.simpleMessage("Email"),
         "login_screen_ForgotPasswordButton":
             MessageLookupByLibrary.simpleMessage("Forgot password?"),
         "login_screen_LoginButton":
-            MessageLookupByLibrary.simpleMessage("Log in"),
+            MessageLookupByLibrary.simpleMessage("Enter"),
         "login_screen_PasswordHint":
             MessageLookupByLibrary.simpleMessage("Password"),
-        "login_screen_Title": MessageLookupByLibrary.simpleMessage("Log in"),
+        "login_screen_Title":
+            MessageLookupByLibrary.simpleMessage("Welcome to Mood Tracker"),
         "signup_screen_AlreadyHaveAccountButton":
             MessageLookupByLibrary.simpleMessage("Already have an account?"),
         "signup_screen_CreateNewAccountButton":
-            MessageLookupByLibrary.simpleMessage("Create new account")
+            MessageLookupByLibrary.simpleMessage("Create account"),
+        "signup_screen_Title": MessageLookupByLibrary.simpleMessage("Join!")
       };
 }
