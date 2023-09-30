@@ -11,4 +11,5 @@ abstract interface class UserRepository {
   });
   Future<void> signOut();
   Future<Profile?> getCurrentUser();
+  Stream<String?> get authStateChanges;
 }

@@ -1,3 +1,4 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import 'mood_data_source.dart';
@@ -11,4 +12,8 @@ final userSourceProvider = Provider<UserDataSource>((ref) {
 
 final moodSourceProvider = Provider<MoodDataSource>((ref) {
   return MoodDataSourceImpl();
+});
+
+final authProvider = StreamProvider<User?>((ref) {
+  return FirebaseAuth.instance.authStateChanges();
 });

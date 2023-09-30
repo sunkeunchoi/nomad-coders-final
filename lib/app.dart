@@ -11,6 +11,7 @@ class App extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     const color = Colors.amber;
+    final router = ref.watch(routerProvider);
     return MaterialApp.router(
       routerDelegate: router.routerDelegate,
       routeInformationParser: router.routeInformationParser,

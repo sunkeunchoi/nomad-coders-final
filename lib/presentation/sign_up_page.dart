@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../generated/l10n.dart';
+import 'view_models/module.dart';
 
 class SignUpPage extends ConsumerStatefulWidget {
   const SignUpPage({super.key});
@@ -14,12 +15,11 @@ class SignUpPage extends ConsumerStatefulWidget {
 }
 
 class _SignUpPageState extends ConsumerState<SignUpPage> {
-  final _formKey = GlobalKey<FormState>();
   final _emailController = TextEditingController();
   final _passwordController = TextEditingController();
   final _focusNode = FocusNode();
   final bool _isPasswordVisible = false;
-
+  late final model = ref.read(profileModel);
   @override
   void initState() {
     super.initState();
@@ -36,7 +36,6 @@ class _SignUpPageState extends ConsumerState<SignUpPage> {
     _emailController.dispose();
     _passwordController.dispose();
     _focusNode.dispose();
-    _formKey.currentState?.dispose();
     super.dispose();
   }
 
@@ -61,6 +60,10 @@ class _SignUpPageState extends ConsumerState<SignUpPage> {
               color: Colors.transparent,
             ),
             TextField(
+              focusNode: _focusNode,
+              controller: _emailController,
+              keyboardType: TextInputType.emailAddress,
+              autocorrect: false,
               decoration: InputDecoration(
                 border: const OutlineInputBorder(),
                 labelText: S.of(context).login_screen_EmailHint,
@@ -70,7 +73,9 @@ class _SignUpPageState extends ConsumerState<SignUpPage> {
               color: Colors.transparent,
             ),
             TextField(
+              controller: _passwordController,
               obscureText: !_isPasswordVisible,
+              keyboardType: TextInputType.text,
               autocorrect: false,
               decoration: InputDecoration(
                 border: const OutlineInputBorder(),
@@ -81,7 +86,14 @@ class _SignUpPageState extends ConsumerState<SignUpPage> {
               color: Colors.transparent,
             ),
             GestureDetector(
-              onTap: () {},
+              onTap: () async {
+                if (_emailController.text.isNotEmpty && _passwordController.text.isNotEmpty) {
+                  await model.signUp(
+                    email: _emailController.text,
+                    password: _passwordController.text,
+                  );
+                }
+              },
               child: Container(
                 width: double.infinity,
                 padding: const EdgeInsets.symmetric(
