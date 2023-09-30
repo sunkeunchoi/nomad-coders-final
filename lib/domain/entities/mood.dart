@@ -24,4 +24,20 @@ class Mood extends Equatable {
       id: id,
     );
   }
+
+  Map<String, dynamic> toJson() {
+    return {
+      'id': id,
+      'name': name,
+      'content': content,
+    };
+  }
+
+  factory Mood.fromJson(Map<String, dynamic> map) {
+    return Mood(
+      id: map['id'],
+      name: map['name'],
+      content: map['content'],
+    );
+  }
 }
