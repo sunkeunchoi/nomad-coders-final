@@ -7,32 +7,17 @@ class MoodRepositoryImpl implements MoodRepository {
   MoodRepositoryImpl(this._moodDataSource);
   final MoodDataSource _moodDataSource;
   @override
-  Future<void> addMood({required Mood mood}) {
-    // TODO: implement addMood
-    throw UnimplementedError();
-  }
+  Future<void> add({required Mood mood}) async => _moodDataSource.add(mood: mood);
 
   @override
-  Future<void> deleteMood({required Mood mood}) {
-    // TODO: implement deleteMood
-    throw UnimplementedError();
-  }
+  Future<void> delete({required Mood mood}) async => _moodDataSource.delete(mood: mood);
 
   @override
-  Future<Mood> getMoodById({required String id}) {
-    // TODO: implement getMoodById
-    throw UnimplementedError();
-  }
+  Future<Mood?> getById({required String id}) async => _moodDataSource.getById(id: id);
 
   @override
-  Future<List<Mood>> getMoods() {
-    // TODO: implement getMoods
-    throw UnimplementedError();
-  }
+  Future<List<Mood>> getAll() async => _moodDataSource.getAll();
 
   @override
-  Future<void> updateMood({required Mood mood}) {
-    // TODO: implement updateMood
-    throw UnimplementedError();
-  }
+  Future<void> update({required Mood mood}) => _moodDataSource.update(mood: mood);
 }

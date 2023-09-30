@@ -1,17 +1,17 @@
 import '../entities/mood.dart';
 
 abstract interface class MoodRepository {
-  Future<void> addMood({
+  Future<void> add({
     required Mood mood,
   });
-  Future<void> deleteMood({
+  Future<void> delete({
     required Mood mood,
   });
-  Future<void> updateMood({
+  Future<void> update({
     required Mood mood,
   });
-  Future<List<Mood>> getMoods();
-  Future<Mood> getMoodById({
+  Future<List<Mood>> getAll();
+  Future<Mood?> getById({
     required String id,
   });
 }

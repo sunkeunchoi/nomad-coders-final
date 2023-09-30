@@ -7,31 +7,31 @@ class MoodDataSourceImpl implements MoodDataSource {
   final String tableName = 'moods';
   final FirebaseFirestore _firebaseFirestore = FirebaseFirestore.instance;
   @override
-  Future<void> addMood({required Mood mood}) async {
+  Future<void> add({required Mood mood}) async {
     _firebaseFirestore.collection(tableName).add(mood.toJson());
   }
 
   @override
-  Future<void> deleteMood({required Mood mood}) async {
+  Future<void> delete({required Mood mood}) async {
     _firebaseFirestore.collection(tableName).doc(mood.id).delete();
   }
 
   @override
-  Future<Mood?> getMoodById({required String id}) async {
+  Future<Mood?> getById({required String id}) async {
     return _firebaseFirestore.collection(tableName).doc(id).get().then((value) {
       return Mood.fromJson(value.data()!);
     });
   }
 
   @override
-  Future<List<Mood>> getMoods() async {
+  Future<List<Mood>> getAll() async {
     return _firebaseFirestore.collection(tableName).get().then((value) {
       return value.docs.map((e) => Mood.fromJson(e.data())).toList();
     });
   }
 
   @override
-  Future<void> updateMood({required Mood mood}) async {
+  Future<void> update({required Mood mood}) async {
     _firebaseFirestore.collection(tableName).doc(mood.id).update(mood.toJson());
   }
 }
