@@ -8,9 +8,23 @@ class App extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    const color = Colors.amber;
     return MaterialApp.router(
-      routerConfig: ref.watch(router),
+      routerDelegate: router.routerDelegate,
+      routeInformationParser: router.routeInformationParser,
+      routeInformationProvider: router.routeInformationProvider,
       debugShowCheckedModeBanner: false,
+      theme: ThemeData.light(useMaterial3: true).copyWith(
+        colorScheme: ColorScheme.fromSeed(
+          seedColor: color,
+        ),
+      ),
+      darkTheme: ThemeData.dark(useMaterial3: true).copyWith(
+        colorScheme: ColorScheme.fromSeed(
+          seedColor: color,
+        ),
+      ),
+      themeMode: ThemeMode.system,
     );
   }
 }
