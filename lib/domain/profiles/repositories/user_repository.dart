@@ -1,4 +1,4 @@
-import '../entities/profile.dart';
+import '../moods/entities/profile.dart';
 
 abstract interface class UserRepository {
   Future<Profile?> signIn({
