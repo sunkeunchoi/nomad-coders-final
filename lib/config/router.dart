@@ -5,7 +5,7 @@ import 'package:proxima_nomadcoders/presentation/moods_page.dart';
 import 'package:proxima_nomadcoders/presentation/sign_in_page.dart';
 
 import '../data/sources/module.dart';
-import '../presentation/mood_add_page.dart';
+import '../presentation/mood_edit_page.dart';
 import '../presentation/sign_up_page.dart';
 
 final _key = GlobalKey<NavigatorState>();
@@ -30,9 +30,13 @@ final routerProvider = Provider<GoRouter>((ref) {
         builder: (context, state) => const SignUpPage(),
       ),
       GoRoute(
-        path: MoodAddPage.routePath,
-        builder: (context, state) => const MoodAddPage(),
-      )
+        path: MoodEditPage.routePath,
+        builder: (context, state) => const MoodEditPage(),
+      ),
+      GoRoute(
+        path: "/edit/:id",
+        builder: (context, state) => MoodEditPage(id: state.pathParameters['id']),
+      ),
     ],
     redirect: (context, state) {
       if (authState.isLoading || authState.hasError) return null;

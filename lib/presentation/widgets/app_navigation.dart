@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:fluentui_system_icons/fluentui_system_icons.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
-import 'package:proxima_nomadcoders/presentation/mood_add_page.dart';
+import 'package:proxima_nomadcoders/presentation/mood_edit_page.dart';
 
 import '../../core/module.dart';
 import '../../generated/l10n.dart';
@@ -31,10 +31,10 @@ class AppNavigation extends ConsumerWidget {
         model.setTab(index);
         switch (index) {
           case 0:
-            context.go(MoodsPage.routePath);
+            context.push(MoodsPage.routePath);
             break;
           case 1:
-            context.go(MoodAddPage.routePath);
+            context.push(MoodEditPage.routePath);
             break;
         }
       },
