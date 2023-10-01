@@ -5,7 +5,6 @@ import 'package:proxima_nomadcoders/presentation/moods_page.dart';
 import 'package:proxima_nomadcoders/presentation/settings_page.dart';
 import 'package:proxima_nomadcoders/presentation/sign_in_page.dart';
 
-import '../core/module.dart';
 import '../data/sources/module.dart';
 import '../presentation/mood_edit_page.dart';
 import '../presentation/sign_up_page.dart';
