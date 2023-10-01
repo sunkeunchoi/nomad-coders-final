@@ -72,6 +72,18 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Mood saved successfully"),
         "moods_add_mood":
             MessageLookupByLibrary.simpleMessage("Add your first mood"),
+        "moods_delete_failed":
+            MessageLookupByLibrary.simpleMessage("Mood delete failed"),
+        "moods_delete_mood":
+            MessageLookupByLibrary.simpleMessage("Delete Mood?"),
+        "moods_delete_mood_cancel":
+            MessageLookupByLibrary.simpleMessage("Cancel"),
+        "moods_delete_mood_confirm": MessageLookupByLibrary.simpleMessage(
+            "Are you sure you want to do this?"),
+        "moods_delete_mood_delete":
+            MessageLookupByLibrary.simpleMessage("Delete"),
+        "moods_delete_success":
+            MessageLookupByLibrary.simpleMessage("Mood deleted successfully"),
         "moods_no_moods": MessageLookupByLibrary.simpleMessage("No moods yet"),
         "moods_screen_Title": MessageLookupByLibrary.simpleMessage("Moods"),
         "prefixAgo": MessageLookupByLibrary.simpleMessage(""),

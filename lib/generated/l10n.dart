@@ -18,15 +18,17 @@ class S {
   static S? _current;
 
   static S get current {
-    assert(
-        _current != null, 'No instance of S was loaded. Try to initialize the S delegate before accessing S.current.');
+    assert(_current != null,
+        'No instance of S was loaded. Try to initialize the S delegate before accessing S.current.');
     return _current!;
   }
 
   static const AppLocalizationDelegate delegate = AppLocalizationDelegate();
 
   static Future<S> load(Locale locale) {
-    final name = (locale.countryCode?.isEmpty ?? false) ? locale.languageCode : locale.toString();
+    final name = (locale.countryCode?.isEmpty ?? false)
+        ? locale.languageCode
+        : locale.toString();
     final localeName = Intl.canonicalizedLocale(name);
     return initializeMessages(localeName).then((_) {
       Intl.defaultLocale = localeName;
@@ -253,6 +255,66 @@ class S {
     return Intl.message(
       'Mood save failed',
       name: 'mood_edit_saved_failed',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Mood deleted successfully`
+  String get moods_delete_success {
+    return Intl.message(
+      'Mood deleted successfully',
+      name: 'moods_delete_success',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Mood delete failed`
+  String get moods_delete_failed {
+    return Intl.message(
+      'Mood delete failed',
+      name: 'moods_delete_failed',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Delete Mood?`
+  String get moods_delete_mood {
+    return Intl.message(
+      'Delete Mood?',
+      name: 'moods_delete_mood',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Are you sure you want to do this?`
+  String get moods_delete_mood_confirm {
+    return Intl.message(
+      'Are you sure you want to do this?',
+      name: 'moods_delete_mood_confirm',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Cancel`
+  String get moods_delete_mood_cancel {
+    return Intl.message(
+      'Cancel',
+      name: 'moods_delete_mood_cancel',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Delete`
+  String get moods_delete_mood_delete {
+    return Intl.message(
+      'Delete',
+      name: 'moods_delete_mood_delete',
       desc: '',
       args: [],
     );

@@ -3,6 +3,7 @@ import 'package:animated_emoji/emojis.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:proxima_nomadcoders/domain/moods/entities/mood.dart';
+import 'package:proxima_nomadcoders/presentation/widgets/extensions.dart';
 import 'package:proxima_nomadcoders/presentation/widgets/time_util.dart';
 
 import '../generated/l10n.dart';
@@ -18,6 +19,14 @@ class MoodsPage extends ConsumerStatefulWidget {
 }
 
 class _MoodsPageState extends ConsumerState<MoodsPage> with AutomaticKeepAliveClientMixin<MoodsPage> {
+  void delete(Mood mood) {
+    ref.read(moodListModel).delete(mood).then((value) {
+      ScaffoldMessenger.of(context).toast(S.of(context).moods_delete_success);
+    }).catchError((e) {
+      ScaffoldMessenger.of(context).toast(S.of(context).moods_delete_failed);
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     super.build(context);
@@ -83,7 +92,39 @@ class _MoodsPageState extends ConsumerState<MoodsPage> with AutomaticKeepAliveCl
                 context,
                 index,
               ) {
-                return MoodCard(mood: moods[index]);
+                return GestureDetector(
+                  onLongPress: () async {
+                    var isConfirmed = await showAdaptiveDialog<bool>(
+                        context: context,
+                        builder: (context) {
+                          return AlertDialog.adaptive(
+                            title: Text(S.of(context).moods_delete_mood),
+                            content: Text(S.of(context).moods_delete_mood_confirm),
+                            actions: [
+                              TextButton(
+                                onPressed: () {
+                                  Navigator.of(context).pop(false);
+                                },
+                                child: Text(S.of(context).moods_delete_mood_cancel),
+                              ),
+                              TextButton(
+                                onPressed: () {
+                                  Navigator.of(context).pop(true);
+                                },
+                                child: Text(
+                                  S.of(context).moods_delete_mood_delete,
+                                  style: TextStyle(color: Theme.of(context).colorScheme.error),
+                                ),
+                              ),
+                            ],
+                          );
+                        });
+                    if (isConfirmed == true) {
+                      delete(moods[index]);
+                    }
+                  },
+                  child: MoodCard(mood: moods[index]),
+                );
               },
               separatorBuilder: (context, index) {
                 return const Divider(
@@ -109,8 +150,6 @@ class MoodCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final elapsed = mood.createdAt;
-    print(DateTime.fromMillisecondsSinceEpoch(elapsed).toString());
     return Column(
       crossAxisAlignment: CrossAxisAlignment.end,
       children: [
@@ -147,7 +186,7 @@ class MoodCard extends StatelessWidget {
           ),
         ),
         Text(
-          elapsed.getTimeAgo(context),
+          mood.createdAt.getTimeAgo(context),
           style: Theme.of(context).textTheme.titleSmall!.copyWith(
                 color: Theme.of(context).colorScheme.onPrimaryContainer,
               ),

@@ -8,12 +8,15 @@ class MoodDataSourceImpl implements MoodDataSource {
   final FirebaseFirestore _firebaseFirestore = FirebaseFirestore.instance;
   @override
   Future<void> add({required Mood mood}) async {
-    _firebaseFirestore.collection(tableName).add(mood.toJson());
+    await _firebaseFirestore.collection(tableName).add(mood.toJson());
   }
 
   @override
   Future<void> delete({required Mood mood}) async {
-    _firebaseFirestore.collection(tableName).doc(mood.id).delete();
+    var doc = await _firebaseFirestore.collection(tableName).where("id", isEqualTo: mood.id).get();
+    var id = doc.docs.firstOrNull?.id;
+    if (id == null) return;
+    await _firebaseFirestore.collection(tableName).doc(id).delete();
   }
 
   @override
@@ -45,6 +48,6 @@ class MoodDataSourceImpl implements MoodDataSource {
 
   @override
   Future<void> update({required Mood mood}) async {
-    _firebaseFirestore.collection(tableName).doc(mood.id).update(mood.toJson());
+    await _firebaseFirestore.collection(tableName).doc(mood.id).update(mood.toJson());
   }
 }
