@@ -250,6 +250,16 @@ class S {
     );
   }
 
+  /// `Mood save failed`
+  String get mood_edit_saved_failed {
+    return Intl.message(
+      'Mood save failed',
+      name: 'mood_edit_saved_failed',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Home`
   String get bottom_nav_lable_home {
     return Intl.message(

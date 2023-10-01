@@ -147,10 +147,13 @@ class _MoodEditPageState extends ConsumerState<MoodEditPage> {
                       );
 
                 final messenger = ScaffoldMessenger.of(context);
-                model.add(item);
-                final router = GoRouter.of(context);
-                messenger.toast(S.of(context).mood_edit_saved_success);
-                if (router.canPop()) router.pop();
+                model.add(item).then((value) {
+                  messenger.toast(S.of(context).mood_edit_saved_success);
+                  final router = GoRouter.of(context);
+                  if (router.canPop()) router.pop();
+                }).catchError((e) {
+                  messenger.toast(S.of(context).mood_edit_saved_failed);
+                });
               },
               child: Container(
                 width: double.infinity,

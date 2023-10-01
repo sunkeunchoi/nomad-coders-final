@@ -28,6 +28,7 @@ class AppNavigation extends ConsumerWidget {
       ],
       currentIndex: model.tab,
       onTap: (index) {
+        if (index == model.tab) return;
         model.setTab(index);
         switch (index) {
           case 0:

@@ -47,6 +47,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("What\'s your mood?"),
         "mood_edit_new_mood": MessageLookupByLibrary.simpleMessage("New Mood"),
         "mood_edit_save": MessageLookupByLibrary.simpleMessage("Post"),
+        "mood_edit_saved_failed":
+            MessageLookupByLibrary.simpleMessage("Mood save failed"),
         "mood_edit_saved_success":
             MessageLookupByLibrary.simpleMessage("Mood saved successfully"),
         "moods_add_mood":
