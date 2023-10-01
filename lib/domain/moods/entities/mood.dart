@@ -7,10 +7,12 @@ class Mood extends Equatable {
   final String id;
   final String name;
   final String content;
+  final String userId;
 
   Mood({
     required this.name,
     required this.content,
+    required this.userId,
     String? id,
   }) : id = id ?? const Uuid().v8();
 
@@ -21,6 +23,7 @@ class Mood extends Equatable {
     return Mood(
       name: name ?? this.name,
       content: content ?? this.content,
+      userId: userId,
       id: id,
     );
   }
@@ -30,6 +33,7 @@ class Mood extends Equatable {
       'id': id,
       'name': name,
       'content': content,
+      "userId": userId,
     };
   }
 
@@ -38,6 +42,7 @@ class Mood extends Equatable {
       id: map['id'],
       name: map['name'],
       content: map['content'],
+      userId: map['userId'],
     );
   }
 }

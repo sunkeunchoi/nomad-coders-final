@@ -4,6 +4,7 @@ import '../../domain/profiles/entities/profile.dart';
 
 abstract interface class UserDataSource {
   Stream<String?> get authStateChanges;
+  String? get userId;
   Future<void> signUp({required String email, required String password});
   Future<void> updateProfile(Profile user, File? profileImage);
   Future<void> signIn({

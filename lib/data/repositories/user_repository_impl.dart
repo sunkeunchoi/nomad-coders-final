@@ -7,6 +7,9 @@ class UserRepositoryImpl implements UserRepository {
   UserRepositoryImpl(this._userDataSource);
   final UserDataSource _userDataSource;
   @override
+  String? get userId => _userDataSource.userId;
+
+  @override
   Stream<String?> get authStateChanges => _userDataSource.authStateChanges;
 
   @override

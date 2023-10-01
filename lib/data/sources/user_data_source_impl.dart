@@ -74,4 +74,7 @@ class UserDataSourceImpl implements UserDataSource {
 
   @override
   Stream<String?> get authStateChanges => _firebaseAuth.authStateChanges().map((user) => user?.uid);
+
+  @override
+  String? get userId => _firebaseAuth.currentUser?.uid;
 }
