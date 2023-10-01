@@ -23,6 +23,8 @@ class MessageLookup extends MessageLookupByLibrary {
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "app_name": MessageLookupByLibrary.simpleMessage("당신의 기분은?"),
+        "bootom_nav_lable_post": MessageLookupByLibrary.simpleMessage("Post"),
+        "bottom_nav_lable_home": MessageLookupByLibrary.simpleMessage("Home"),
         "language": MessageLookupByLibrary.simpleMessage("한글"),
         "login_screen_CreateAccountButton":
             MessageLookupByLibrary.simpleMessage("계정 생성하기 →"),

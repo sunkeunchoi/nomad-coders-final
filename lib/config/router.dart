@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
+import 'package:proxima_nomadcoders/domain/moods/entities/mood.dart';
 import 'package:proxima_nomadcoders/presentation/moods_page.dart';
 import 'package:proxima_nomadcoders/presentation/sign_in_page.dart';
 
 import '../data/sources/module.dart';
+import '../presentation/mood_add_page.dart';
 import '../presentation/sign_up_page.dart';
 
 final _key = GlobalKey<NavigatorState>();
@@ -28,6 +30,10 @@ final routerProvider = Provider<GoRouter>((ref) {
         path: SignUpPage.routePath,
         builder: (context, state) => const SignUpPage(),
       ),
+      GoRoute(
+        path: MoodAddPage.routePath,
+        builder: (context, state) => const MoodAddPage(),
+      )
     ],
     redirect: (context, state) {
       if (authState.isLoading || authState.hasError) return null;

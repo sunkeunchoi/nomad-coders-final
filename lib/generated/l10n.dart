@@ -180,6 +180,26 @@ class S {
     );
   }
 
+  /// `Home`
+  String get bottom_nav_lable_home {
+    return Intl.message(
+      'Home',
+      name: 'bottom_nav_lable_home',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Post`
+  String get bootom_nav_lable_post {
+    return Intl.message(
+      'Post',
+      name: 'bootom_nav_lable_post',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `English (US)`
   String get language {
     return Intl.message(

@@ -5,16 +5,23 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../generated/l10n.dart';
 import 'view_models/module.dart';
+import 'widgets/app_navigation.dart';
 
-class MoodsPage extends ConsumerWidget {
+class MoodsPage extends ConsumerStatefulWidget {
   const MoodsPage({super.key});
   static const routePath = "/";
 
   @override
-  Widget build(BuildContext context, WidgetRef ref) {
-    final moods = ref.watch(moodListState);
+  ConsumerState<MoodsPage> createState() => _MoodsPageState();
+}
 
+class _MoodsPageState extends ConsumerState<MoodsPage> with AutomaticKeepAliveClientMixin<MoodsPage> {
+  @override
+  Widget build(BuildContext context) {
+    super.build(context);
+    final moods = ref.watch(moodListState);
     return Scaffold(
+      bottomNavigationBar: const AppNavigation(),
       appBar: AppBar(
         automaticallyImplyLeading: false,
         title: Text(S.of(context).moods_screen_Title),
@@ -93,4 +100,7 @@ class MoodsPage extends ConsumerWidget {
             ),
     );
   }
+
+  @override
+  bool get wantKeepAlive => true;
 }

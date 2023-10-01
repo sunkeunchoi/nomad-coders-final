@@ -6,6 +6,8 @@ class TabStateNotifier extends StateNotifier<int> {
   void setTab(int index) async {
     state = index;
   }
+
+  get tab => state;
 }
 
 final tabState = StateNotifierProvider<TabStateNotifier, int>(

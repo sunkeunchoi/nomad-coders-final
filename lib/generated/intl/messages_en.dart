@@ -23,6 +23,8 @@ class MessageLookup extends MessageLookupByLibrary {
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "app_name": MessageLookupByLibrary.simpleMessage("How is your moods?"),
+        "bootom_nav_lable_post": MessageLookupByLibrary.simpleMessage("Post"),
+        "bottom_nav_lable_home": MessageLookupByLibrary.simpleMessage("Home"),
         "language": MessageLookupByLibrary.simpleMessage("English (US)"),
         "login_screen_CreateAccountButton":
             MessageLookupByLibrary.simpleMessage("Create an account →"),
