@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
+import 'package:proxima_nomadcoders/core/module.dart';
 import 'package:proxima_nomadcoders/presentation/view_models/module.dart';
 import 'package:proxima_nomadcoders/presentation/widgets/app_navigation.dart';
 import 'package:proxima_nomadcoders/presentation/widgets/extensions.dart';
 
 import '../domain/moods/entities/mood.dart';
 import '../generated/l10n.dart';
+import 'moods_page.dart';
 import 'widgets/mood_emoji.dart';
 
 class MoodEditPage extends ConsumerStatefulWidget {
@@ -149,8 +151,8 @@ class _MoodEditPageState extends ConsumerState<MoodEditPage> {
                 final messenger = ScaffoldMessenger.of(context);
                 model.add(item).then((value) {
                   messenger.toast(S.of(context).mood_edit_saved_success);
-                  final router = GoRouter.of(context);
-                  if (router.canPop()) router.pop();
+                  ref.read(tabModel).setTab(0);
+                  context.go(MoodsPage.routePath);
                 }).catchError((e) {
                   messenger.toast(S.of(context).mood_edit_saved_failed);
                 });

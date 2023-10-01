@@ -51,7 +51,7 @@ class Mood extends Equatable {
         name: map['name'],
         content: map['content'],
         userId: map['userId'],
-        createdAt: map['createdAt'],
-        updatedAt: map['updatedAt']);
+        createdAt: map['createdAt'] as int,
+        updatedAt: map['updatedAt'] as int?);
   }
 }

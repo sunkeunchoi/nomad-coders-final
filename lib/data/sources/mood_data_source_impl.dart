@@ -33,6 +33,10 @@ class MoodDataSourceImpl implements MoodDataSource {
           'userId',
           isEqualTo: userId,
         )
+        .orderBy(
+          "createdAt",
+          descending: true,
+        )
         .get()
         .then((value) {
       return value.docs.map((e) => Mood.fromJson(e.data())).toList();

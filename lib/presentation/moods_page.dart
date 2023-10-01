@@ -2,6 +2,8 @@ import 'package:animated_emoji/emoji.dart';
 import 'package:animated_emoji/emojis.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:proxima_nomadcoders/domain/moods/entities/mood.dart';
+import 'package:proxima_nomadcoders/presentation/widgets/time_util.dart';
 
 import '../generated/l10n.dart';
 import 'view_models/module.dart';
@@ -75,32 +77,83 @@ class _MoodsPageState extends ConsumerState<MoodsPage> with AutomaticKeepAliveCl
                 ),
               ),
             )
-          : SingleChildScrollView(
-              child: ListView.separated(
-                itemBuilder: (
-                  context,
-                  index,
-                ) {
-                  return ListTile(
-                    title: Text(moods[index].name),
-                    subtitle: Text(moods[index].content),
-                    trailing: IconButton(
-                      icon: const Icon(Icons.delete),
-                      onPressed: () {
-                        ref.read(moodListModel).delete(moods[index]);
-                      },
-                    ),
-                  );
-                },
-                separatorBuilder: (context, index) {
-                  return const Divider();
-                },
-                itemCount: moods.length,
-              ),
+          : ListView.separated(
+              padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+              itemBuilder: (
+                context,
+                index,
+              ) {
+                return MoodCard(mood: moods[index]);
+              },
+              separatorBuilder: (context, index) {
+                return const Divider(
+                  color: Colors.transparent,
+                );
+              },
+              itemCount: moods.length,
             ),
     );
   }
 
   @override
   bool get wantKeepAlive => true;
+}
+
+class MoodCard extends StatelessWidget {
+  const MoodCard({
+    super.key,
+    required this.mood,
+  });
+
+  final Mood mood;
+
+  @override
+  Widget build(BuildContext context) {
+    final elapsed = DateTime.now().microsecondsSinceEpoch - mood.createdAt;
+    print(mood.createdAt);
+    final timeAgo = elapsed.timeAgo();
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.end,
+      children: [
+        Container(
+          padding: const EdgeInsets.symmetric(
+            horizontal: 20,
+            vertical: 10,
+          ),
+          decoration: BoxDecoration(
+            color: Theme.of(context).colorScheme.primaryContainer,
+            borderRadius: BorderRadius.circular(5),
+            border: Border.all(
+              color: Theme.of(context).colorScheme.inversePrimary,
+              width: 2,
+            ),
+          ),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: [
+              AnimatedEmoji(
+                AnimatedEmojis.fromCode(mood.name),
+                size: 50,
+              ),
+              Expanded(
+                child: Text(
+                  mood.content,
+                  textAlign: TextAlign.end,
+                  style: Theme.of(context).textTheme.titleMedium!.copyWith(
+                        color: Theme.of(context).colorScheme.onPrimaryContainer,
+                      ),
+                ),
+              ),
+            ],
+          ),
+        ),
+        Text(
+          "${timeAgo.$1} ${timeAgo.$2}",
+          style: Theme.of(context).textTheme.titleSmall!.copyWith(
+                color: Theme.of(context).colorScheme.onPrimaryContainer,
+              ),
+        )
+      ],
+    );
+  }
 }
