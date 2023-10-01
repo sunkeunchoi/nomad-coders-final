@@ -321,20 +321,90 @@ class S {
   }
 
   /// `Home`
-  String get bottom_nav_lable_home {
+  String get bottom_nav_label_home {
     return Intl.message(
       'Home',
-      name: 'bottom_nav_lable_home',
+      name: 'bottom_nav_label_home',
       desc: '',
       args: [],
     );
   }
 
   /// `Post`
-  String get bootom_nav_lable_post {
+  String get bootom_nav_label_post {
     return Intl.message(
       'Post',
-      name: 'bootom_nav_lable_post',
+      name: 'bootom_nav_label_post',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Profile`
+  String get bootom_nav_label_profile {
+    return Intl.message(
+      'Profile',
+      name: 'bootom_nav_label_profile',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Profiles`
+  String get settings_screen_Title {
+    return Intl.message(
+      'Profiles',
+      name: 'settings_screen_Title',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Theme(Dark)`
+  String get settings_theme {
+    return Intl.message(
+      'Theme(Dark)',
+      name: 'settings_theme',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Choose your theme (Dark, Light)`
+  String get settings_theme_subtitle {
+    return Intl.message(
+      'Choose your theme (Dark, Light)',
+      name: 'settings_theme_subtitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Language(English)`
+  String get settings_locale {
+    return Intl.message(
+      'Language(English)',
+      name: 'settings_locale',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Choose your language (English, Korean)`
+  String get settings_locale_subtitle {
+    return Intl.message(
+      'Choose your language (English, Korean)',
+      name: 'settings_locale_subtitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Logout`
+  String get settings_logout {
+    return Intl.message(
+      'Logout',
+      name: 'settings_logout',
       desc: '',
       args: [],
     );

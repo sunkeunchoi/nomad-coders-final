@@ -38,8 +38,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "aboutAYear": MessageLookupByLibrary.simpleMessage("약 1년"),
         "aboutAnHour": MessageLookupByLibrary.simpleMessage("약 1시간"),
         "app_name": MessageLookupByLibrary.simpleMessage("당신의 기분은?"),
-        "bootom_nav_lable_post": MessageLookupByLibrary.simpleMessage("Post"),
-        "bottom_nav_lable_home": MessageLookupByLibrary.simpleMessage("Home"),
+        "bootom_nav_label_post": MessageLookupByLibrary.simpleMessage("새무드"),
+        "bootom_nav_label_profile": MessageLookupByLibrary.simpleMessage("설정"),
+        "bottom_nav_label_home": MessageLookupByLibrary.simpleMessage("홈"),
         "days": m0,
         "hours": m1,
         "language": MessageLookupByLibrary.simpleMessage("한글"),
@@ -57,37 +58,40 @@ class MessageLookup extends MessageLookupByLibrary {
         "minutes": m2,
         "months": m3,
         "mood_edit_content":
-            MessageLookupByLibrary.simpleMessage("How do you feel?"),
+            MessageLookupByLibrary.simpleMessage("오늘의 기분은 어떠신가요?"),
         "mood_edit_content_hint":
-            MessageLookupByLibrary.simpleMessage("Write it down here!"),
-        "mood_edit_edit_mood":
-            MessageLookupByLibrary.simpleMessage("Edit Mood"),
+            MessageLookupByLibrary.simpleMessage("기분을 적어주세요"),
+        "mood_edit_edit_mood": MessageLookupByLibrary.simpleMessage("무드 수정"),
         "mood_edit_name":
-            MessageLookupByLibrary.simpleMessage("What\'s your mood?"),
-        "mood_edit_new_mood": MessageLookupByLibrary.simpleMessage("New Mood"),
-        "mood_edit_save": MessageLookupByLibrary.simpleMessage("Post"),
+            MessageLookupByLibrary.simpleMessage("오늘의 기분은 어떠신가요?"),
+        "mood_edit_new_mood": MessageLookupByLibrary.simpleMessage("새 무드 추가"),
+        "mood_edit_save": MessageLookupByLibrary.simpleMessage("등록"),
         "mood_edit_saved_failed":
-            MessageLookupByLibrary.simpleMessage("Mood save failed"),
+            MessageLookupByLibrary.simpleMessage("저장에 실패하였습니다."),
         "mood_edit_saved_success":
-            MessageLookupByLibrary.simpleMessage("Mood saved successfully"),
-        "moods_add_mood":
-            MessageLookupByLibrary.simpleMessage("Add your first mood"),
+            MessageLookupByLibrary.simpleMessage("저장 되었습니다."),
+        "moods_add_mood": MessageLookupByLibrary.simpleMessage("첫 무드를 추가하세요!"),
         "moods_delete_failed":
-            MessageLookupByLibrary.simpleMessage("Mood delete failed"),
-        "moods_delete_mood":
-            MessageLookupByLibrary.simpleMessage("Delete Mood?"),
-        "moods_delete_mood_cancel":
-            MessageLookupByLibrary.simpleMessage("Cancel"),
-        "moods_delete_mood_confirm": MessageLookupByLibrary.simpleMessage(
-            "Are you sure you want to do this?"),
-        "moods_delete_mood_delete":
-            MessageLookupByLibrary.simpleMessage("Delete"),
+            MessageLookupByLibrary.simpleMessage("삭제에 실패 하였습니다."),
+        "moods_delete_mood": MessageLookupByLibrary.simpleMessage("삭제 하시겠습니까?"),
+        "moods_delete_mood_cancel": MessageLookupByLibrary.simpleMessage("취소"),
+        "moods_delete_mood_confirm":
+            MessageLookupByLibrary.simpleMessage("정말로 삭제하시겠습니까?"),
+        "moods_delete_mood_delete": MessageLookupByLibrary.simpleMessage("삭제"),
         "moods_delete_success":
-            MessageLookupByLibrary.simpleMessage("Mood deleted successfully"),
-        "moods_no_moods": MessageLookupByLibrary.simpleMessage("No moods yet"),
-        "moods_screen_Title": MessageLookupByLibrary.simpleMessage("Moods"),
+            MessageLookupByLibrary.simpleMessage("삭제 되었습니다."),
+        "moods_no_moods": MessageLookupByLibrary.simpleMessage("하나도 없네요~"),
+        "moods_screen_Title": MessageLookupByLibrary.simpleMessage("오늘의 무드?"),
         "prefixAgo": MessageLookupByLibrary.simpleMessage(""),
         "prefixFromNow": MessageLookupByLibrary.simpleMessage("지금부터"),
+        "settings_locale": MessageLookupByLibrary.simpleMessage("언어(영어)"),
+        "settings_locale_subtitle":
+            MessageLookupByLibrary.simpleMessage("영어 / 한글"),
+        "settings_logout": MessageLookupByLibrary.simpleMessage("로그아웃"),
+        "settings_screen_Title": MessageLookupByLibrary.simpleMessage("개인설정"),
+        "settings_theme": MessageLookupByLibrary.simpleMessage("모드(다크모드)"),
+        "settings_theme_subtitle":
+            MessageLookupByLibrary.simpleMessage("다크모드 / 라이트모드"),
         "signup_screen_AlreadyHaveAccountButton":
             MessageLookupByLibrary.simpleMessage("이미 계정이 있으신가요?"),
         "signup_screen_CreateNewAccountButton":

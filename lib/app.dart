@@ -3,6 +3,7 @@ import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import 'config/router.dart';
+import 'core/module.dart';
 import 'generated/l10n.dart';
 
 class App extends ConsumerWidget {
@@ -27,7 +28,7 @@ class App extends ConsumerWidget {
           seedColor: color,
         ),
       ),
-      themeMode: ThemeMode.system,
+      themeMode: ref.watch(themeState) ? ThemeMode.dark : ThemeMode.light,
       localizationsDelegates: const [
         S.delegate,
         GlobalMaterialLocalizations.delegate,
@@ -35,6 +36,7 @@ class App extends ConsumerWidget {
         GlobalCupertinoLocalizations.delegate,
       ],
       supportedLocales: S.delegate.supportedLocales,
+      locale: Locale.fromSubtags(languageCode: ref.watch(localeState)),
     );
   }
 }

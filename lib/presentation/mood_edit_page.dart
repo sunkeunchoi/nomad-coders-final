@@ -58,6 +58,7 @@ class _MoodEditPageState extends ConsumerState<MoodEditPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Theme.of(context).colorScheme.surface,
         title: Text(S.of(context).moods_screen_Title),
       ),
       body: Container(

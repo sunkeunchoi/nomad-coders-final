@@ -38,8 +38,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "aboutAYear": MessageLookupByLibrary.simpleMessage("about a year"),
         "aboutAnHour": MessageLookupByLibrary.simpleMessage("about an hour"),
         "app_name": MessageLookupByLibrary.simpleMessage("How is your moods?"),
-        "bootom_nav_lable_post": MessageLookupByLibrary.simpleMessage("Post"),
-        "bottom_nav_lable_home": MessageLookupByLibrary.simpleMessage("Home"),
+        "bootom_nav_label_post": MessageLookupByLibrary.simpleMessage("Post"),
+        "bootom_nav_label_profile":
+            MessageLookupByLibrary.simpleMessage("Profile"),
+        "bottom_nav_label_home": MessageLookupByLibrary.simpleMessage("Home"),
         "days": m0,
         "hours": m1,
         "language": MessageLookupByLibrary.simpleMessage("English (US)"),
@@ -89,6 +91,16 @@ class MessageLookup extends MessageLookupByLibrary {
         "moods_screen_Title": MessageLookupByLibrary.simpleMessage("Moods"),
         "prefixAgo": MessageLookupByLibrary.simpleMessage(""),
         "prefixFromNow": MessageLookupByLibrary.simpleMessage(""),
+        "settings_locale":
+            MessageLookupByLibrary.simpleMessage("Language(English)"),
+        "settings_locale_subtitle": MessageLookupByLibrary.simpleMessage(
+            "Choose your language (English, Korean)"),
+        "settings_logout": MessageLookupByLibrary.simpleMessage("Logout"),
+        "settings_screen_Title":
+            MessageLookupByLibrary.simpleMessage("Profiles"),
+        "settings_theme": MessageLookupByLibrary.simpleMessage("Theme(Dark)"),
+        "settings_theme_subtitle": MessageLookupByLibrary.simpleMessage(
+            "Choose your theme (Dark, Light)"),
         "signup_screen_AlreadyHaveAccountButton":
             MessageLookupByLibrary.simpleMessage("Already have an account?"),
         "signup_screen_CreateNewAccountButton":

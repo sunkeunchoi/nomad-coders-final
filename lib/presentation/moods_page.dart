@@ -2,6 +2,7 @@ import 'package:animated_emoji/emoji.dart';
 import 'package:animated_emoji/emojis.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:proxima_nomadcoders/core/module.dart';
 import 'package:proxima_nomadcoders/domain/moods/entities/mood.dart';
 import 'package:proxima_nomadcoders/presentation/widgets/extensions.dart';
 import 'package:proxima_nomadcoders/presentation/widgets/time_util.dart';

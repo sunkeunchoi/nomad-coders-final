@@ -7,6 +7,7 @@ import 'package:proxima_nomadcoders/presentation/mood_edit_page.dart';
 import '../../core/module.dart';
 import '../../generated/l10n.dart';
 import '../moods_page.dart';
+import '../settings_page.dart';
 
 class AppNavigation extends ConsumerWidget {
   const AppNavigation({super.key});
@@ -19,11 +20,15 @@ class AppNavigation extends ConsumerWidget {
       items: [
         BottomNavigationBarItem(
           icon: const Icon(FluentIcons.home_24_regular),
-          label: S.of(context).bottom_nav_lable_home,
+          label: S.of(context).bottom_nav_label_home,
         ),
         BottomNavigationBarItem(
           icon: const Icon(FluentIcons.compose_24_filled),
-          label: S.of(context).bootom_nav_lable_post,
+          label: S.of(context).bootom_nav_label_post,
+        ),
+        BottomNavigationBarItem(
+          icon: const Icon(FluentIcons.person_24_regular),
+          label: S.of(context).bootom_nav_label_profile,
         ),
       ],
       currentIndex: model.tab,
@@ -36,6 +41,9 @@ class AppNavigation extends ConsumerWidget {
             break;
           case 1:
             context.push(MoodEditPage.routePath);
+            break;
+          case 2:
+            context.push(SettingsPage.routePath);
             break;
         }
       },
