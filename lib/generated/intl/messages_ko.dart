@@ -20,12 +20,30 @@ typedef String MessageIfAbsent(String messageStr, List<dynamic> args);
 class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'ko';
 
+  static String m0(d) => "${d}일";
+
+  static String m1(h) => "${h}시간";
+
+  static String m2(min) => "${min}분";
+
+  static String m3(m) => "${m}달";
+
+  static String m4(y) => "${y}년";
+
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "aDay": MessageLookupByLibrary.simpleMessage("약 1일"),
+        "aboutAMinute": MessageLookupByLibrary.simpleMessage("약 1분"),
+        "aboutAMonth": MessageLookupByLibrary.simpleMessage("약 1달"),
+        "aboutAYear": MessageLookupByLibrary.simpleMessage("약 1년"),
+        "aboutAnHour": MessageLookupByLibrary.simpleMessage("약 1시간"),
         "app_name": MessageLookupByLibrary.simpleMessage("당신의 기분은?"),
         "bootom_nav_lable_post": MessageLookupByLibrary.simpleMessage("Post"),
         "bottom_nav_lable_home": MessageLookupByLibrary.simpleMessage("Home"),
+        "days": m0,
+        "hours": m1,
         "language": MessageLookupByLibrary.simpleMessage("한글"),
+        "lessThanOneMinute": MessageLookupByLibrary.simpleMessage("방금"),
         "login_screen_CreateAccountButton":
             MessageLookupByLibrary.simpleMessage("계정 생성하기 →"),
         "login_screen_EmailHint": MessageLookupByLibrary.simpleMessage("이메일"),
@@ -36,6 +54,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("패스워드"),
         "login_screen_Title":
             MessageLookupByLibrary.simpleMessage("무드 트래커에 오신 것을 환영합니다"),
+        "minutes": m2,
+        "months": m3,
         "mood_edit_content":
             MessageLookupByLibrary.simpleMessage("How do you feel?"),
         "mood_edit_content_hint":
@@ -54,11 +74,17 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Add your first mood"),
         "moods_no_moods": MessageLookupByLibrary.simpleMessage("No moods yet"),
         "moods_screen_Title": MessageLookupByLibrary.simpleMessage("Moods"),
+        "prefixAgo": MessageLookupByLibrary.simpleMessage(""),
+        "prefixFromNow": MessageLookupByLibrary.simpleMessage("지금부터"),
         "signup_screen_AlreadyHaveAccountButton":
             MessageLookupByLibrary.simpleMessage("이미 계정이 있으신가요?"),
         "signup_screen_CreateNewAccountButton":
             MessageLookupByLibrary.simpleMessage("계정을 만드세요"),
         "signup_screen_Title":
-            MessageLookupByLibrary.simpleMessage("무드 트래커에 가입하세요~")
+            MessageLookupByLibrary.simpleMessage("무드 트래커에 가입하세요~"),
+        "suffixAgo": MessageLookupByLibrary.simpleMessage("전"),
+        "suffixFromNow": MessageLookupByLibrary.simpleMessage("후"),
+        "wordSeparator": MessageLookupByLibrary.simpleMessage(" "),
+        "years": m4
       };
 }

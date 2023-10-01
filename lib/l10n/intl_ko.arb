@@ -23,5 +23,56 @@
     "mood_edit_saved_failed": "Mood save failed",
     "bottom_nav_lable_home": "Home",
     "bootom_nav_lable_post": "Post",
+    "prefixAgo": "",
+    "prefixFromNow": "지금부터",
+    "suffixAgo": "전",
+    "suffixFromNow": "후",
+    "lessThanOneMinute": "방금",
+    "aboutAMinute": "약 1분",
+    "minutes": "{min}분",
+    "@minutes": {
+        "placeholders": {
+            "min": {
+                "type": "int"
+            }
+        }
+    },
+    "aboutAnHour": "약 1시간",
+    "hours": "{h}시간",
+    "@hours": {
+        "placeholders": {
+            "h": {
+                "type": "int"
+            }
+        }
+    },
+    "aDay": "약 1일",
+    "days": "{d}일",
+    "@days": {
+        "placeholders": {
+            "d": {
+                "type": "int"
+            }
+        }
+    },
+    "aboutAMonth": "약 1달",
+    "months": "{m}달",
+    "@months": {
+        "placeholders": {
+            "m": {
+                "type": "int"
+            }
+        }
+    },
+    "aboutAYear": "약 1년",
+    "years": "{y}년",
+    "@years": {
+        "placeholders": {
+            "y": {
+                "type": "int"
+            }
+        }
+    },
+    "wordSeparator": " ",
     "language": "한글"
 }

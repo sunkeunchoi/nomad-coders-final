@@ -109,9 +109,8 @@ class MoodCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final elapsed = DateTime.now().microsecondsSinceEpoch - mood.createdAt;
-    print(mood.createdAt);
-    final timeAgo = elapsed.timeAgo();
+    final elapsed = mood.createdAt;
+    print(DateTime.fromMillisecondsSinceEpoch(elapsed).toString());
     return Column(
       crossAxisAlignment: CrossAxisAlignment.end,
       children: [
@@ -148,7 +147,7 @@ class MoodCard extends StatelessWidget {
           ),
         ),
         Text(
-          "${timeAgo.$1} ${timeAgo.$2}",
+          elapsed.getTimeAgo(context),
           style: Theme.of(context).textTheme.titleSmall!.copyWith(
                 color: Theme.of(context).colorScheme.onPrimaryContainer,
               ),

@@ -20,12 +20,30 @@ typedef String MessageIfAbsent(String messageStr, List<dynamic> args);
 class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'en';
 
+  static String m0(d) => "${d} days";
+
+  static String m1(h) => "${h} hours";
+
+  static String m2(min) => "${min} minutes";
+
+  static String m3(m) => "${m} months";
+
+  static String m4(y) => "${y} years";
+
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "aDay": MessageLookupByLibrary.simpleMessage("a day"),
+        "aboutAMinute": MessageLookupByLibrary.simpleMessage("a minute"),
+        "aboutAMonth": MessageLookupByLibrary.simpleMessage("about a month"),
+        "aboutAYear": MessageLookupByLibrary.simpleMessage("about a year"),
+        "aboutAnHour": MessageLookupByLibrary.simpleMessage("about an hour"),
         "app_name": MessageLookupByLibrary.simpleMessage("How is your moods?"),
         "bootom_nav_lable_post": MessageLookupByLibrary.simpleMessage("Post"),
         "bottom_nav_lable_home": MessageLookupByLibrary.simpleMessage("Home"),
+        "days": m0,
+        "hours": m1,
         "language": MessageLookupByLibrary.simpleMessage("English (US)"),
+        "lessThanOneMinute": MessageLookupByLibrary.simpleMessage("a moment"),
         "login_screen_CreateAccountButton":
             MessageLookupByLibrary.simpleMessage("Create an account →"),
         "login_screen_EmailHint": MessageLookupByLibrary.simpleMessage("Email"),
@@ -37,6 +55,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Password"),
         "login_screen_Title": MessageLookupByLibrary.simpleMessage(
             "Welcome to the Mood Diaray App"),
+        "minutes": m2,
+        "months": m3,
         "mood_edit_content":
             MessageLookupByLibrary.simpleMessage("How do you feel?"),
         "mood_edit_content_hint":
@@ -55,10 +75,16 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Add your first mood"),
         "moods_no_moods": MessageLookupByLibrary.simpleMessage("No moods yet"),
         "moods_screen_Title": MessageLookupByLibrary.simpleMessage("Moods"),
+        "prefixAgo": MessageLookupByLibrary.simpleMessage(""),
+        "prefixFromNow": MessageLookupByLibrary.simpleMessage(""),
         "signup_screen_AlreadyHaveAccountButton":
             MessageLookupByLibrary.simpleMessage("Already have an account?"),
         "signup_screen_CreateNewAccountButton":
             MessageLookupByLibrary.simpleMessage("Create account"),
-        "signup_screen_Title": MessageLookupByLibrary.simpleMessage("Join!")
+        "signup_screen_Title": MessageLookupByLibrary.simpleMessage("Join!"),
+        "suffixAgo": MessageLookupByLibrary.simpleMessage("ago"),
+        "suffixFromNow": MessageLookupByLibrary.simpleMessage("from now"),
+        "wordSeparator": MessageLookupByLibrary.simpleMessage(" "),
+        "years": m4
       };
 }

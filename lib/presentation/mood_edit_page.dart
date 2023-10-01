@@ -142,7 +142,7 @@ class _MoodEditPageState extends ConsumerState<MoodEditPage> {
                         name: emojiIds[selectedEmoji!],
                         updatedAt: DateTime.now().millisecondsSinceEpoch,
                       )
-                    : Mood(
+                    : Mood.create(
                         userId: userId,
                         content: content.text,
                         name: emojiIds[selectedEmoji!],

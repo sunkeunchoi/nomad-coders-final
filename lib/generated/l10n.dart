@@ -18,17 +18,15 @@ class S {
   static S? _current;
 
   static S get current {
-    assert(_current != null,
-        'No instance of S was loaded. Try to initialize the S delegate before accessing S.current.');
+    assert(
+        _current != null, 'No instance of S was loaded. Try to initialize the S delegate before accessing S.current.');
     return _current!;
   }
 
   static const AppLocalizationDelegate delegate = AppLocalizationDelegate();
 
   static Future<S> load(Locale locale) {
-    final name = (locale.countryCode?.isEmpty ?? false)
-        ? locale.languageCode
-        : locale.toString();
+    final name = (locale.countryCode?.isEmpty ?? false) ? locale.languageCode : locale.toString();
     final localeName = Intl.canonicalizedLocale(name);
     return initializeMessages(localeName).then((_) {
       Intl.defaultLocale = localeName;
@@ -275,6 +273,166 @@ class S {
     return Intl.message(
       'Post',
       name: 'bootom_nav_lable_post',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// ``
+  String get prefixAgo {
+    return Intl.message(
+      '',
+      name: 'prefixAgo',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// ``
+  String get prefixFromNow {
+    return Intl.message(
+      '',
+      name: 'prefixFromNow',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `ago`
+  String get suffixAgo {
+    return Intl.message(
+      'ago',
+      name: 'suffixAgo',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `from now`
+  String get suffixFromNow {
+    return Intl.message(
+      'from now',
+      name: 'suffixFromNow',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `a moment`
+  String get lessThanOneMinute {
+    return Intl.message(
+      'a moment',
+      name: 'lessThanOneMinute',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `a minute`
+  String get aboutAMinute {
+    return Intl.message(
+      'a minute',
+      name: 'aboutAMinute',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `{min} minutes`
+  String minutes(int min) {
+    return Intl.message(
+      '$min minutes',
+      name: 'minutes',
+      desc: '',
+      args: [min],
+    );
+  }
+
+  /// `about an hour`
+  String get aboutAnHour {
+    return Intl.message(
+      'about an hour',
+      name: 'aboutAnHour',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `{h} hours`
+  String hours(int h) {
+    return Intl.message(
+      '$h hours',
+      name: 'hours',
+      desc: '',
+      args: [h],
+    );
+  }
+
+  /// `a day`
+  String get aDay {
+    return Intl.message(
+      'a day',
+      name: 'aDay',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `{d} days`
+  String days(int d) {
+    return Intl.message(
+      '$d days',
+      name: 'days',
+      desc: '',
+      args: [d],
+    );
+  }
+
+  /// `about a month`
+  String get aboutAMonth {
+    return Intl.message(
+      'about a month',
+      name: 'aboutAMonth',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `{m} months`
+  String months(int m) {
+    return Intl.message(
+      '$m months',
+      name: 'months',
+      desc: '',
+      args: [m],
+    );
+  }
+
+  /// `about a year`
+  String get aboutAYear {
+    return Intl.message(
+      'about a year',
+      name: 'aboutAYear',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `{y} years`
+  String years(int y) {
+    return Intl.message(
+      '$y years',
+      name: 'years',
+      desc: '',
+      args: [y],
+    );
+  }
+
+  /// ` `
+  String get wordSeparator {
+    return Intl.message(
+      ' ',
+      name: 'wordSeparator',
       desc: '',
       args: [],
     );

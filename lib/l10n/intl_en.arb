@@ -23,5 +23,56 @@
     "mood_edit_saved_failed": "Mood save failed",
     "bottom_nav_lable_home": "Home",
     "bootom_nav_lable_post": "Post",
+    "prefixAgo": "",
+    "prefixFromNow": "",
+    "suffixAgo": "ago",
+    "suffixFromNow": "from now",
+    "lessThanOneMinute": "a moment",
+    "aboutAMinute": "a minute",
+    "minutes": "{min} minutes",
+    "@minutes": {
+        "placeholders": {
+            "min": {
+                "type": "int"
+            }
+        }
+    },
+    "aboutAnHour": "about an hour",
+    "hours": "{h} hours",
+    "@hours": {
+        "placeholders": {
+            "h": {
+                "type": "int"
+            }
+        }
+    },
+    "aDay": "a day",
+    "days": "{d} days",
+    "@days": {
+        "placeholders": {
+            "d": {
+                "type": "int"
+            }
+        }
+    },
+    "aboutAMonth": "about a month",
+    "months": "{m} months",
+    "@months": {
+        "placeholders": {
+            "m": {
+                "type": "int"
+            }
+        }
+    },
+    "aboutAYear": "about a year",
+    "years": "{y} years",
+    "@years": {
+        "placeholders": {
+            "y": {
+                "type": "int"
+            }
+        }
+    },
+    "wordSeparator": " ",
     "language": "English (US)"
 }
