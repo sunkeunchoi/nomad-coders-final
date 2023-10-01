@@ -10,5 +10,8 @@
     "login_screen_ForgotPasswordButton": "비밀번호를 잊으셨나요?",
     "signup_screen_CreateNewAccountButton": "계정을 만드세요",
     "signup_screen_AlreadyHaveAccountButton": "이미 계정이 있으신가요?",
+    "moods_screen_Title": "Moods",
+    "moods_no_moods": "No moods yet",
+    "moods_add_mood": "Add your first mood",
     "language": "한글"
 }

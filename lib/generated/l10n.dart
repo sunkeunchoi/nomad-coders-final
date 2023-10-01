@@ -60,10 +60,10 @@ class S {
     );
   }
 
-  /// `Welcome to Mood Tracker`
+  /// `Welcome to the Mood Diaray App`
   String get login_screen_Title {
     return Intl.message(
-      'Welcome to Mood Tracker',
+      'Welcome to the Mood Diaray App',
       name: 'login_screen_Title',
       desc: '',
       args: [],
@@ -145,6 +145,36 @@ class S {
     return Intl.message(
       'Already have an account?',
       name: 'signup_screen_AlreadyHaveAccountButton',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Moods`
+  String get moods_screen_Title {
+    return Intl.message(
+      'Moods',
+      name: 'moods_screen_Title',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `No moods yet`
+  String get moods_no_moods {
+    return Intl.message(
+      'No moods yet',
+      name: 'moods_no_moods',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Add your first mood`
+  String get moods_add_mood {
+    return Intl.message(
+      'Add your first mood',
+      name: 'moods_add_mood',
       desc: '',
       args: [],
     );

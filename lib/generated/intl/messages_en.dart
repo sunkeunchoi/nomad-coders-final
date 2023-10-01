@@ -33,8 +33,12 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Enter"),
         "login_screen_PasswordHint":
             MessageLookupByLibrary.simpleMessage("Password"),
-        "login_screen_Title":
-            MessageLookupByLibrary.simpleMessage("Welcome to Mood Tracker"),
+        "login_screen_Title": MessageLookupByLibrary.simpleMessage(
+            "Welcome to the Mood Diaray App"),
+        "moods_add_mood":
+            MessageLookupByLibrary.simpleMessage("Add your first mood"),
+        "moods_no_moods": MessageLookupByLibrary.simpleMessage("No moods yet"),
+        "moods_screen_Title": MessageLookupByLibrary.simpleMessage("Moods"),
         "signup_screen_AlreadyHaveAccountButton":
             MessageLookupByLibrary.simpleMessage("Already have an account?"),
         "signup_screen_CreateNewAccountButton":

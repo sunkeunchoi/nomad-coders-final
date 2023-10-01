@@ -1,7 +1,7 @@
 {
     "@@locale": "en",
     "app_name": "How is your moods?",
-    "login_screen_Title": "Welcome to Mood Tracker",
+    "login_screen_Title": "Welcome to the Mood Diaray App",
     "signup_screen_Title": "Join!",
     "login_screen_EmailHint": "Email",
     "login_screen_PasswordHint": "Password",
@@ -10,5 +10,8 @@
     "login_screen_ForgotPasswordButton": "Forgot password?",
     "signup_screen_CreateNewAccountButton": "Create account",
     "signup_screen_AlreadyHaveAccountButton": "Already have an account?",
+    "moods_screen_Title": "Moods",
+    "moods_no_moods": "No moods yet",
+    "moods_add_mood": "Add your first mood",
     "language": "English (US)"
 }

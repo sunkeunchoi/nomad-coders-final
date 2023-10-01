@@ -12,8 +12,8 @@ final routerProvider = Provider<GoRouter>((ref) {
   final authState = ref.watch(authProvider);
 
   return GoRouter(
-    // initialLocation: MoodsPage.routePath,
-    initialLocation: SignInPage.routePath,
+    initialLocation: MoodsPage.routePath,
+    // initialLocation: SignInPage.routePath,
     navigatorKey: _key,
     routes: [
       GoRoute(
