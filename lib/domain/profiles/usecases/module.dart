@@ -11,21 +11,21 @@ import 'sign_up.dart';
 import 'sign_up_impl.dart';
 
 final getCurrentUserUseCase = Provider<GetCurrentUser>((ref) {
-  var repository = ref.read(uesrRepository);
+  var repository = ref.read(userRepository);
   return GetCurrentUserImpl(repository);
 });
 
 final signInUseCase = Provider<SignIn>((ref) {
-  var repository = ref.read(uesrRepository);
+  var repository = ref.read(userRepository);
   return SignInImpl(repository);
 });
 
 final signUpUseCase = Provider<SignUp>((ref) {
-  var repository = ref.read(uesrRepository);
+  var repository = ref.read(userRepository);
   return SignUpImpl(repository);
 });
 
 final signOutUseCase = Provider<SignOut>((ref) {
-  var repository = ref.read(uesrRepository);
+  var repository = ref.read(userRepository);
   return SignOutImpl(repository);
 });

@@ -10,7 +10,7 @@ abstract interface class MoodDataSource {
   Future<void> update({
     required Mood mood,
   });
-  Future<List<Mood>> getAll();
+  Future<List<Mood>> getAll(String userId);
   Future<Mood?> getById({
     required String id,
   });

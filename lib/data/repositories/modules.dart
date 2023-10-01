@@ -10,7 +10,7 @@ final moodRepository = Provider<MoodRepository>((ref) {
   return MoodRepositoryImpl(moodSource);
 });
 
-final uesrRepository = Provider<UserRepository>((ref) {
+final userRepository = Provider<UserRepository>((ref) {
   var userSource = ref.read(userSourceProvider);
   return UserRepositoryImpl(userSource);
 });

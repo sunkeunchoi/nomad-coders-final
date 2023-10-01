@@ -24,8 +24,15 @@ class MoodDataSourceImpl implements MoodDataSource {
   }
 
   @override
-  Future<List<Mood>> getAll() async {
-    return _firebaseFirestore.collection(tableName).get().then((value) {
+  Future<List<Mood>> getAll(String userId) async {
+    return _firebaseFirestore
+        .collection(tableName)
+        .where(
+          'userId',
+          isEqualTo: userId,
+        )
+        .get()
+        .then((value) {
       return value.docs.map((e) => Mood.fromJson(e.data())).toList();
     });
   }

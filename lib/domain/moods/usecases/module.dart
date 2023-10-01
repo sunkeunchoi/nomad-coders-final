@@ -11,7 +11,7 @@ import 'save_mood.dart';
 import 'save_mood_impl.dart';
 
 final getMoodsUseCase = Provider<GetMoods>((ref) {
-  return GetMoodsImpl(ref.read(moodRepository));
+  return GetMoodsImpl(ref.read(moodRepository), ref.read(userRepository));
 });
 
 final getMoodUseCase = Provider<GetMood>((ref) {

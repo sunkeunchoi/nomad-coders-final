@@ -16,7 +16,7 @@ class MoodRepositoryImpl implements MoodRepository {
   Future<Mood?> getById({required String id}) async => _moodDataSource.getById(id: id);
 
   @override
-  Future<List<Mood>> getAll() async => _moodDataSource.getAll();
+  Future<List<Mood>> getAll(String userId) async => _moodDataSource.getAll(userId);
 
   @override
   Future<void> update({required Mood mood}) => _moodDataSource.update(mood: mood);
