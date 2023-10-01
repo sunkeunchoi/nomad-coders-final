@@ -34,7 +34,7 @@ final routerProvider = Provider<GoRouter>((ref) {
         builder: (context, state) => const MoodEditPage(),
       ),
       GoRoute(
-        path: "/edit/:id",
+        path: MoodEditPage.routePathWithId,
         builder: (context, state) => MoodEditPage(id: state.pathParameters['id']),
       ),
     ],

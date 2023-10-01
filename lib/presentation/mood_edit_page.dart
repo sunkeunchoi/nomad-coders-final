@@ -5,6 +5,7 @@ class MoodEditPage extends StatelessWidget {
   const MoodEditPage({super.key, this.id});
   final String? id;
   static const routePath = "/edit";
+  static const routePathWithId = "/edit/:id";
 
   @override
   Widget build(BuildContext context) {
