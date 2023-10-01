@@ -8,13 +8,16 @@ class Mood extends Equatable {
   final String name;
   final String content;
   final String userId;
+  final int createdAt;
 
   Mood({
     required this.name,
     required this.content,
     required this.userId,
+    int? createdAt,
     String? id,
-  }) : id = id ?? const Uuid().v8();
+  })  : id = id ?? const Uuid().v8(),
+        createdAt = DateTime.now().millisecondsSinceEpoch;
 
   @override
   List<Object?> get props => [id];
@@ -34,6 +37,7 @@ class Mood extends Equatable {
       'name': name,
       'content': content,
       "userId": userId,
+      'createdAt': createdAt,
     };
   }
 
@@ -43,6 +47,7 @@ class Mood extends Equatable {
       name: map['name'],
       content: map['content'],
       userId: map['userId'],
+      createdAt: int.parse(map['createdAt']),
     );
   }
 }
