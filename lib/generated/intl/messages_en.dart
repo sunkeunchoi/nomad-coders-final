@@ -37,6 +37,16 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Password"),
         "login_screen_Title": MessageLookupByLibrary.simpleMessage(
             "Welcome to the Mood Diaray App"),
+        "mood_edit_content":
+            MessageLookupByLibrary.simpleMessage("How do you feel?"),
+        "mood_edit_content_hint":
+            MessageLookupByLibrary.simpleMessage("Write it down here!"),
+        "mood_edit_edit_mood":
+            MessageLookupByLibrary.simpleMessage("Edit Mood"),
+        "mood_edit_name":
+            MessageLookupByLibrary.simpleMessage("What\'s your mood?"),
+        "mood_edit_new_mood": MessageLookupByLibrary.simpleMessage("New Mood"),
+        "mood_edit_save": MessageLookupByLibrary.simpleMessage("Post"),
         "moods_add_mood":
             MessageLookupByLibrary.simpleMessage("Add your first mood"),
         "moods_no_moods": MessageLookupByLibrary.simpleMessage("No moods yet"),

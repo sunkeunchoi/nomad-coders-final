@@ -180,6 +180,66 @@ class S {
     );
   }
 
+  /// `New Mood`
+  String get mood_edit_new_mood {
+    return Intl.message(
+      'New Mood',
+      name: 'mood_edit_new_mood',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Edit Mood`
+  String get mood_edit_edit_mood {
+    return Intl.message(
+      'Edit Mood',
+      name: 'mood_edit_edit_mood',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `How do you feel?`
+  String get mood_edit_content {
+    return Intl.message(
+      'How do you feel?',
+      name: 'mood_edit_content',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Write it down here!`
+  String get mood_edit_content_hint {
+    return Intl.message(
+      'Write it down here!',
+      name: 'mood_edit_content_hint',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `What's your mood?`
+  String get mood_edit_name {
+    return Intl.message(
+      'What\'s your mood?',
+      name: 'mood_edit_name',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Post`
+  String get mood_edit_save {
+    return Intl.message(
+      'Post',
+      name: 'mood_edit_save',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Home`
   String get bottom_nav_lable_home {
     return Intl.message(

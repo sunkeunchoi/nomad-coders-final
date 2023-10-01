@@ -25,4 +25,6 @@ class ProfileStateNotifier extends StateNotifier<Profile?> {
   Future<void> signUp({required String email, required String password}) async {
     await ref.read(signUpUseCase).call(email, password);
   }
+
+  String? get userId => state?.id;
 }

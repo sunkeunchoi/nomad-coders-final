@@ -13,7 +13,13 @@
     "moods_screen_Title": "Moods",
     "moods_no_moods": "No moods yet",
     "moods_add_mood": "Add your first mood",
-    "bottom_nav_lable_home":"Home",
-    "bootom_nav_lable_post":"Post",
+    "mood_edit_new_mood": "New Mood",
+    "mood_edit_edit_mood": "Edit Mood",
+    "mood_edit_content": "How do you feel?",
+    "mood_edit_content_hint": "Write it down here!",
+    "mood_edit_name": "What's your mood?",
+    "mood_edit_save": "Post",
+    "bottom_nav_lable_home": "Home",
+    "bootom_nav_lable_post": "Post",
     "language": "English (US)"
 }
