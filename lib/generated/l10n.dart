@@ -240,6 +240,16 @@ class S {
     );
   }
 
+  /// `Mood saved successfully`
+  String get mood_edit_saved_success {
+    return Intl.message(
+      'Mood saved successfully',
+      name: 'mood_edit_saved_success',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Home`
   String get bottom_nav_lable_home {
     return Intl.message(

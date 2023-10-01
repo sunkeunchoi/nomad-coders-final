@@ -36,9 +36,18 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("패스워드"),
         "login_screen_Title":
             MessageLookupByLibrary.simpleMessage("무드 트래커에 오신 것을 환영합니다"),
+        "mood_edit_content":
+            MessageLookupByLibrary.simpleMessage("How do you feel?"),
+        "mood_edit_content_hint":
+            MessageLookupByLibrary.simpleMessage("Write it down here!"),
         "mood_edit_edit_mood":
             MessageLookupByLibrary.simpleMessage("Edit Mood"),
+        "mood_edit_name":
+            MessageLookupByLibrary.simpleMessage("What\'s your mood?"),
         "mood_edit_new_mood": MessageLookupByLibrary.simpleMessage("New Mood"),
+        "mood_edit_save": MessageLookupByLibrary.simpleMessage("Post"),
+        "mood_edit_saved_success":
+            MessageLookupByLibrary.simpleMessage("Mood saved successfully"),
         "moods_add_mood":
             MessageLookupByLibrary.simpleMessage("Add your first mood"),
         "moods_no_moods": MessageLookupByLibrary.simpleMessage("No moods yet"),

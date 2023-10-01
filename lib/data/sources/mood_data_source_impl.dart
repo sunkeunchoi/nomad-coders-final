@@ -19,7 +19,9 @@ class MoodDataSourceImpl implements MoodDataSource {
   @override
   Future<Mood?> getById({required String id}) async {
     return _firebaseFirestore.collection(tableName).doc(id).get().then((value) {
-      return Mood.fromJson(value.data()!);
+      var data = value.data();
+      if (data == null) return null;
+      return Mood.fromJson(data);
     });
   }
 

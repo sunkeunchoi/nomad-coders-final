@@ -9,11 +9,13 @@ class Mood extends Equatable {
   final String content;
   final String userId;
   final int createdAt;
+  final int? updatedAt;
 
   Mood({
     required this.name,
     required this.content,
     required this.userId,
+    this.updatedAt,
     int? createdAt,
     String? id,
   })  : id = id ?? const Uuid().v8(),
@@ -22,10 +24,11 @@ class Mood extends Equatable {
   @override
   List<Object?> get props => [id];
 
-  Mood copyWith({String? name, String? content}) {
+  Mood copyWith({String? name, String? content, int? updatedAt}) {
     return Mood(
       name: name ?? this.name,
       content: content ?? this.content,
+      updatedAt: updatedAt ?? this.updatedAt,
       userId: userId,
       id: id,
     );
@@ -38,6 +41,7 @@ class Mood extends Equatable {
       'content': content,
       "userId": userId,
       'createdAt': createdAt,
+      'updatedAt': updatedAt,
     };
   }
 
@@ -47,7 +51,8 @@ class Mood extends Equatable {
       name: map['name'],
       content: map['content'],
       userId: map['userId'],
-      createdAt: int.parse(map['createdAt']),
+      createdAt: map['createdAt'] != null ? int.parse(map['createdAt']) : null,
+      updatedAt: map['updatedAt'] != null ? int.parse(map['updatedAt']) : null,
     );
   }
 }

@@ -19,6 +19,7 @@
     "mood_edit_content_hint": "Write it down here!",
     "mood_edit_name": "What's your mood?",
     "mood_edit_save": "Post",
+    "mood_edit_saved_success": "Mood saved successfully",
     "bottom_nav_lable_home": "Home",
     "bootom_nav_lable_post": "Post",
     "language": "English (US)"

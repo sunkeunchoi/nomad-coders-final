@@ -21,8 +21,8 @@ class MoodEditPage extends ConsumerStatefulWidget {
 
 class _MoodEditPageState extends ConsumerState<MoodEditPage> {
   final TextEditingController content = TextEditingController();
-  final TextEditingController name = TextEditingController();
   late final model = ref.read(moodListModel);
+  Mood? mood;
   bool edited = false;
   int? selectedEmoji;
   void change() {
@@ -37,12 +37,12 @@ class _MoodEditPageState extends ConsumerState<MoodEditPage> {
   void initState() {
     super.initState();
     content.addListener(change);
-    name.addListener(change);
     if (widget.id != null) {
       model.get(widget.id!).then((value) {
         if (value == null) return;
         content.text = value.content;
-        name.text = value.name;
+        selectedEmoji = emojiIds.indexOf(value.name);
+        mood = value;
         if (mounted) {
           setState(() {
             edited = false;
@@ -133,16 +133,23 @@ class _MoodEditPageState extends ConsumerState<MoodEditPage> {
                 if (content.text.isEmpty) return;
                 var userId = ref.read(profileModel).userId;
                 if (userId == null) return;
-                var item = Mood(
-                  userId: userId,
-                  content: content.text,
-                  name: name.text,
-                  id: widget.id,
-                );
+
+                var item = mood != null
+                    ? mood!.copyWith(
+                        content: content.text,
+                        name: emojiIds[selectedEmoji!],
+                        updatedAt: DateTime.now().millisecondsSinceEpoch,
+                      )
+                    : Mood(
+                        userId: userId,
+                        content: content.text,
+                        name: emojiIds[selectedEmoji!],
+                      );
+
                 final messenger = ScaffoldMessenger.of(context);
                 model.add(item);
                 final router = GoRouter.of(context);
-                messenger.toast('Todo saved!');
+                messenger.toast(S.of(context).mood_edit_saved_success);
                 if (router.canPop()) router.pop();
               },
               child: Container(
