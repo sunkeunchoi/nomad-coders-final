@@ -46,8 +46,8 @@ final routerProvider = Provider<GoRouter>((ref) {
     redirect: (context, state) {
       if (authState.isLoading || authState.hasError) return null;
       final isAuth = authState.valueOrNull != null;
-      final isSignIn = SignInPage.routePath == state.path;
-      final isSignUp = SignUpPage.routePath == state.path;
+      final isSignIn = SignInPage.routePath == state.uri.path;
+      final isSignUp = SignUpPage.routePath == state.uri.path;
       if (isSignIn || isSignUp) {
         if (isAuth) {
           return MoodsPage.routePath;

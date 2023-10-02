@@ -31,6 +31,7 @@ class _MoodsPageState extends ConsumerState<MoodsPage> with AutomaticKeepAliveCl
   Widget build(BuildContext context) {
     super.build(context);
     final moods = ref.watch(moodListState);
+    ref.read(moodListModel).loadMoods();
     return Scaffold(
       bottomNavigationBar: const AppNavigation(),
       appBar: AppBar(
